@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calvin Josenhans</title>
+
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -13,7 +15,7 @@
         <header>
             <div class="about">
                 <a href="/index.html">
-                    <h1>Calvin Josenhans</h1>
+                    <h1 id="page-title">Calvin Josenhans</h1>
                 </a>
                 <h2>I do some stuff sometimes.</h2>
             </div>
@@ -24,15 +26,44 @@
                 <h1>Things I like to do</h1>
                 <p>I'm currently studying math and computer science, but I also like videogames, playing violin, and
                     learning spanish.</p>
-                <p>I program for fun in Lua, C, or whatever other language I'm into at the moment.</p>
+                <p>I program for fun in Lua, C, Javascript, or whatever other language I'm into at the moment. See some
+                    of my code at my <a href="https://github.com/HalflingHelper/">GitHub</a>.</p>
             </div>
             <div class="projects">
                 <!-- TODO: Add a way to filter by games, tools, misc? -->
                 <h1>Some cool things I've made</h1>
                 <div class="entries">
                     <!-- Sorting algorithms -->
+                    <a href="SortingVisualization/sort.html">
+                        <div class="card">
+                            <h2 class="card-title">Sorting Algorithm Visualizer</h2>
+                            <div class="card-list">
+                                <p>Visualizer for 4 basic sorting algorithms</p>
+                                <p>Made with pure Javascript and HTML</p>
+                            </div>
+                        </div>
+                    </a>
                     <!-- Limit Calculator -->
-                    <!-- Rebus Wordle -->
+                    <a href="https://github.com/HalflingHelper/LimitCalculator">
+                        <div class="card">
+                            <h2 class="card-title">Limit Calculator</h2>
+                            <div class="card-list">
+                                <p>A Lua script to parse expressions and calculate their limits</p>
+                                <p>Made with Lua</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Mandlebrot set, maybe make a page talking about it, optimizing and such? -->
+                    <a href="https://github.com/HalflingHelper/Mandlebrot">
+                        <div class="card">
+                            <h2 class="card-title">Mandlebrot Set</h2>
+                            <div class="card-list">
+                                <p>Calculating and displaying the Mandlebrot set.</p>
+                                <p>Made with Lua and Löve</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Rebus Wordle if I ever finish it -->
                     <!-- A video game if I ever finish it -->
                 </div>
             </div>

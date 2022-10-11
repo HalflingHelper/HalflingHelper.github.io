@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithms</title>
+
+    <!-- Dumping css here because I don't want to deal with external file -->
+    <style>
+        html {
+            background-color: #453e4d;
+        }
+
+        .page-container {
+            font-family: monospace;
+        }
+
+        .header {
+            color: #AC5EFF;
+            font-size: larger;
+            margin-left: 1em;
+        }
+
+        .sim-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .page-component {
+            margin: 1em;
+            padding: .25em;
+            padding-top: .5em;
+            border-radius: 0.7em;
+            max-width: 38em;
+            background-color: #7d6795;
+            color: #fbfbd6;
+            font-size: large;
+        }
+
+        #data-vis {
+            border-radius: 0.7em;
+            background-color: paleturquoise;
+            max-width: 100%;
+        }
+
+        #data-vis-container {
+            text-align: center;
+        }
+
+        #settings-container {
+            padding: 1em;
+            display: flex;
+            column-gap: 1em;
+            flex-wrap: wrap;
+        }
+
+        #settings-container .option {
+            border-radius: .2em;
+            border-style: none;
+            background-color: #AC5EFF;
+            transition: background 0.4s ease-in-out;
+        }
+
+        #settings-container .option:hover {
+            background-color: #9b5edc;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="header">
+            <h1>Sorting Algorithm Visualization!</h1>
+        </div>
+        <div class="sim-container">
+
+
+            <div class="page-component" id="data-vis-container">
+                <canvas id="data-vis" width="600em">
+
+                </canvas>
+                <div id="settings-container">
+                    <div>
+                        <label for="algorithms">Select a sorting algorithm:</label>
+                        <select name="algorithms" id="sort-selector" class="option">
+                            <option value="selection">Selection sort</option>
+                            <option value="merge">Merge sort</option>
+                            <option value="quick">Quick sort</option>
+                            <option value="bubble">Bubble sort</option>
+                        </select>
+                    </div>
+
+
+                    <button id="start-sort-btn" class="btn option">Sort</button>
+                    <button id="randomize-btn" class="btn option">Randomize Values</button>
+                    <button id="pause-btn" class="btn option">Pause Sort</button>
+                    <div>
+                        <label for="speed">Change Speed:</label>
+                        <input autocomplete="off" type="range" value="50" name="speed" id="speed-slider">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Holds information about the sorting alogrithm that is selected -->
+            <div class="page-component">
+                <p id="info-box"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Dumping scripts here because I don't know best practice -->
+<script src="descriptions.js"></script> <!-- Description Text  -->
+
+<script src="sorts.js"></script> <!-- Algorithm Code  -->
+<script src="controls.js"></script> <!-- Handling Inputs -->
+<script src="display.js"></script> <!-- Canvas Stuff    -->
+
+</html>

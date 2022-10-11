@@ -1,0 +1,57 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: beige;
+}
+
+h1 {
+    color: darkblue;
+}
+
+#page-title {
+    color: black;
+}
+
+h2 {
+    color: #3f3c9e;
+}
+
+p {
+    color: #222222;
+}
+
+.wrapper {
+    max-width: 700px;
+    margin: 0px auto;
+}
+
+.card-list p::before {
+    content: " 🡺";
+}
+
+.card {
+    margin: 5px;
+    position: relative;
+    left: 1px;
+    transition-duration: 0.3s
+}
+
+.card:hover {
+    left: 5px;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: teal;
+}
+
+a:hover {
+    color: black;
+}
+
+footer {
+    margin-top: 20px;
+    border-top: 3px dashed darkblue;
+    text-align: center;
+    font-weight: bold;
+}
