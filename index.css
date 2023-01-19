@@ -20,7 +20,7 @@ p {
 }
 
 .wrapper {
-    max-width: 700px;
+    max-width: 50em;
     margin: 0px auto;
 }
 
@@ -54,4 +54,28 @@ footer {
     border-top: 3px dashed darkblue;
     text-align: center;
     font-weight: bold;
+}
+
+.fun {
+    /* border: 2px solid red; */
+    width: 100%;
+    max-width: 25em;
+    margin: 0px auto;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.little-box {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    margin-left: auto;
+    background-color: #DDD;
+    transition-duration: .5s;
+}
+
+
+
+body {
+    display: flex;
 }
