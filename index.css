@@ -80,3 +80,20 @@ footer {
 body {
     display: flex;
 }
+
+
+#typer::after {
+    content: "|";
+    animation-name: blink;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier( 1, -100, 0, 100 );
+    animation-direction: alternate-reverse;
+    opacity: 1;
+
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    to {opacity: 0; }
+}
