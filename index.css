@@ -25,6 +25,17 @@ p {
     padding: 2em;
 }
 
+footer {
+    margin-top: 20px;
+    border-top: 3px dashed darkblue;
+    text-align: center;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+}
+
 .card-list p::before {
     content: " 🡺";
 }
@@ -50,38 +61,14 @@ a:hover {
     color: black;
 }
 
-footer {
-    margin-top: 20px;
-    border-top: 3px dashed darkblue;
-    text-align: center;
-    font-weight: bold;
+/* External Links */
+a[href*="https"] h2:after {
+    /* The icon can be a SVG or image file */
+    content: url('external.svg');
+    margin-left: 0.25rem;
 }
 
-.fun {
-    /* border: 2px solid red; */
-    width: 100%;
-    max-width: 25em;
-    margin: 0px auto;
-    display:flex;
-    flex-wrap: wrap;
-}
-
-.little-box {
-    width: 20px;
-    height: 20px;
-    margin: 2px;
-    margin-left: auto;
-    background-color: #DDD;
-    transition-duration: .5s;
-}
-
-
-
-body {
-    display: flex;
-}
-
-
+/* Blinking Cursor */
 #typer::after {
     content: "|";
     animation-name: blink;
