@@ -1,5 +1,7 @@
-<!-- TODO: Some sort of indication that things are links -->
 <!-- TODO: Cool animation or thing that follows math cursor around -->
+<!-- TODO: Fix the css for the sorting algorithm thing -->
+<!-- TODO: Lightmode/Darkmode button -->
+<!-- TODO: Skills Section -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,50 +16,42 @@
 </head>
 
 <body>
-    <!-- <div class="fun">
-
-    </div> -->
     <div class="wrapper">
         <header>
-            <div class="about">
+            <div class="nav">
                 <a href="/index.html">
                     <h1 id="page-title">Calvin Josenhans</h1>
                 </a>
-                <h2>I do some stuff sometimes.</h2>
+                <!-- Make this look better and cooler -->
+                <div class="nav">
+                    <a href="#projects">Projects</a>
+                    &bull;
+                    <a href="#research">Research</a>
+                    &bull;
+                    <a href="#experience">Experience</a>
+                    &bull;
+                    <a href="#involvement">Involvement</a>
+                </div>
+
             </div>
-            <!-- Links to github, resume, and itch -->
+            <div class="about">
+                <h2><span id="typer">Programming</span> Nerd</h2>
+                <script src="scripts/typwrite.js"></script>
+                <p>I'm currently a second-year student Majoring in Computer Science and Math at Indiana University. In my free time I enjoy running, climbing, and playing the violin.</p>
+            </div>
+            <!-- Links to github, resume, and itch? -->
             <div class="links">
-                <a href="Resume/Resume.html">Resume</a>
+                <a href="https://github.com/HalflingHelper">Github</a><img alt="External Link" src="external.svg" />
                 &bull;
-                <a href="https://github.com/HalflingHelper">Github</a>
-                &bull;
-                <a href="https://www.linkedin.com/in/cjosenha/">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/cjosenha/">LinkedIn</a><img alt="External Link"
+                    src="external.svg" />
             </div>
+
         </header>
         <div class="content">
-            <div class="stuff">
-                <h1>Things I like to do</h1>
-                <p>I'm currently studying math and computer science, but I also like videogames, playing violin, and
-                    learning spanish.</p>
-                <p>I program for fun in Lua, C, Javascript, or whatever other language I'm into at the moment. I also
-                    know Java but that isn't as fun.
-                    See some of my code at my <a href="https://github.com/HalflingHelper/">GitHub</a>.</p>
-            </div>
-            <div class="projects">
-                <h1>Some (sort of) cool things I've worked on</h1>
+            <div id="experience">
+                <h1>Experience</h1>
                 <div class="entries">
-                    <!-- Chess Engine -->
-                    <a href="https://github.com/HalflingHelper/WaneEngine">
-                        <div class="card">
-                            <h2 class="card-title">Wane Chess Engine</h2>
-                            <div class="card-list">
-                                <p>A basic chess engine made from scratch to learn more about the internal components of a chess engine.</p>
-                                <p>Includes move ordering and a transposition table.</p>
-                                <p>Made with Lua and inspired by TSCP</p>
-                            </div>
-                        </div>
-                    </a>
-                    
                     <!-- Intertwined -->
                     <a href="https://www.intertwinedfinance.com/">
                         <div class="card">
@@ -65,7 +59,61 @@
                             <div class="card-list">
                                 <p>Lead development and implementation of frontend design.</p>
                                 <p>Update and maintain the course content database.</p>
-                                <p>Using Blazor and MySQL</p>
+                                <p>Using Blazor, TailwindCSS, and MySQL</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Tutoring -->
+                    <a href="">
+                        <div class="card">
+                            <h2 class="card-title">Peer Tutor</h2>
+                            <div class="card-list">
+                                <p>Tutor core classes in the math and computer sciene departments at Indiana University.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="research">
+                <h1>Research</h1>
+                <div class="entries">
+                    <!-- NLP Lab -->
+                    <a href="https://nlp-lab.org/ellipsis/">
+                        <div class="card">
+                            <h2 class="card-title">NLP Lab at Indiana University</h2>
+                            <div class="card-list">
+                                <p>Data collection of the Ellipsis phenomena in English and Spanish.</p>
+                                <p>Using Git, Python, and Visual Studio</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="projects">
+                <h1>Selected Projects</h1>
+                <div class="entries">
+                    <!-- Chess Engine -->
+                    <a href="https://github.com/HalflingHelper/WaneEngine">
+                        <div class="card">
+                            <h2 class="card-title">Wane Chess Engine</h2>
+                            <div class="card-list">
+                                <p>A basic chess engine made from scratch to learn more about the internal components of
+                                    a chess engine.</p>
+                                <p>Includes move ordering and a transposition table.</p>
+                                <p>Made with Lua and inspired by TSCP</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Mega Puzzle -->
+                    <a href="https://sites.google.com/iu.edu/mega-puzzle/home">
+                        <div class="card">
+                            <h2 class="card-title">Mega Puzzle</h2>
+                            <div class="card-list">
+                                <p>An interconnected puzzle extravaganza, inspired by the MIT Mystery hunt.</p>
+                                <p>Designed <em>Tetris</em>, <em>Joust</em>, and <em>Punch Out</em>, and working on new
+                                    puzzles for 2024's incarnation.</p>
+                                <p>Made with HTML, CSS, and my critical thinking skills</p>
                             </div>
                         </div>
                     </a>
@@ -75,17 +123,7 @@
                             <h2 class="card-title">Sorting Algorithm Visualizer</h2>
                             <div class="card-list">
                                 <p>Visualizer for 4 basic sorting algorithms</p>
-                                <p>Made with pure Javascript and HTML</p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- Limit Calculator -->
-                    <a href="https://github.com/HalflingHelper/LimitCalculator">
-                        <div class="card">
-                            <h2 class="card-title">Limit Calculator</h2>
-                            <div class="card-list">
-                                <p>A Lua script to parse expressions and calculate their limits</p>
-                                <p>Made with Lua</p>
+                                <p>Made with Javascript and HTML</p>
                             </div>
                         </div>
                     </a>
@@ -99,24 +137,57 @@
                             </div>
                         </div>
                     </a>
-                    <!-- Rebus Wordle if I ever finish it -->
                     <!-- A video game if I ever finish it -->
                     <!-- Running Data -->
-                    
+                </div>
+            </div>
+            <!-- Maybe this is optional -->
+            <div id="involvement">
+                <h1>Community Involvement</h1>
+                <div class="entries">
+                    <!-- Student Ambassador -->
+                    <a href="https://luddy.indiana.edu/admissions/student-ambassadors.html">
+                        <div class="card">
+                            <h2 class="card-title">Student Ambassadors</h2>
+                            <div class="card-list">
+                                <p>Utilize presentation and communication skills to inform prospective students about
+                                    the school&rsquo;s degrees, opportunities, and resources.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Luddy LLC -->
+                    <a href="">
+                        <div class="card">
+                            <h2 class="card-title">Luddy Living Learning Center</h2>
+                            <div class="card-list">
+                                <p>An awesome first-year tech living community at Indiana University.</p>
+                                <p>I help plan and run community events and mentor students through their freshman year
+                                    of college.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Lotus Fest -->
+                    <a href="">
+                        <div class="card">
+                            <h2 class="card-title">Lotus Festival</h2>
+                            <div class="card-list">
+                                <p>An annual world music festival in Bloomington, Indiana.</p>
+                                <p>As a volunteer I provide support to event organizers and help create a positive
+                                    experience for event attendees.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
         <footer>
             <p>Thanks for looking at my website</p>
             <p>You can find the
-                <a href="https://github.com/HalflingHelper/HalflingHelper.github.io">source here</a>
+                <a href="https://github.com/HalflingHelper/HalflingHelper.github.io">source here</a><img
+                    alt="External Link" src="external.svg" />
             </p>
         </footer>
     </div>
-    <!-- <div class="fun">
-
-    </div> -->
 </body>
-<!-- <script src="fun.js"></script> -->
 
 </html>
