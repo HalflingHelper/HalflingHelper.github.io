@@ -1,4 +1,4 @@
-function highlight(n1=-1, n2=-1, col='#0000FF') {
+function highlight(n1 = -1, n2 = -1, col = '#0000FF') {
     highlight1 = n1
     highlight2 = n2
     highlightCol = col
@@ -18,28 +18,30 @@ function doSort(arr, sortId) {
             return quickSort(arr)
         case 3:
             return bubbleSort(arr)
+        case 4:
+            return heapSort(arr)
         default:
             return
     }
 }
 
-//Quick Sort with right value as the pivot
+// Quick Sort with right value as the pivot
 // I'm not sure if this is a legit quick sort, I might be cheating a tiny bit
-function* quickSort(arr, start = 0, end=null, depth=0) {
+function* quickSort(arr, start = 0, end = null, depth = 0) {
     // console.log(start + '   ' + end)
     depth++
     console.log(depth)
     if (depth > 400) return
-    end = end ? end : arr.length-1
-    if (end-start < 1) return
+    end = end ? end : arr.length - 1
+    if (end - start < 1) return
 
     let pivotIndex = end
     let pivot = arr[end]
-    
+
     for (let i = start; i <= pivotIndex; i++) {
         if (arr[i] > pivot) {
             let temp = arr[i]
-            arr.splice(end+1, 0, temp)
+            arr.splice(end + 1, 0, temp)
             pivotIndex--
             highlight(i, pivotIndex)
             arr.splice(i, 1)
@@ -70,7 +72,7 @@ function* bubbleSort(arr) {
         swapped = false
         for (let i = 0; i < arr.length - 1; i++) {
             //If I implement highlighting comparisions
-            
+
             if (arr[i + 1] < arr[i]) {
                 swapped = true
                 let temp = arr[i]
@@ -81,7 +83,7 @@ function* bubbleSort(arr) {
                 highlight(i, i + 1, '#00FF00')
                 yield
             } else {
-                highlight(i, i+1)
+                highlight(i, i + 1)
                 yield
             }
         }
@@ -97,7 +99,7 @@ function* selectionSort(arr) {
         min = 101
         minIndex = -1
         //Highlight here
-        
+
         //yield
         for (let j = i; j < arr.length; j++) {
             highlight(j, minIndex)
@@ -134,7 +136,7 @@ function* mergeSort(arr) {
                     break
                 let temp = arr[size + j]
                 //Comparision is here
-                highlight(size+j, j)
+                highlight(size + j, j)
                 yield
                 if (temp < arr[j]) {
                     arr.splice(size + j, 1)
@@ -151,4 +153,44 @@ function* mergeSort(arr) {
     highlight()
     return
 
+}
+
+// Helpers for heap sort
+left = idx => idx * 2 + 1;
+right = idx => idx * 2 + 2;
+
+function* heapSort(arr) {
+    // Heapify the array
+    for (let i = Math.floor(arr.length / 2) - 1; i >= 0; i--) {
+        let largest = i;
+
+        // Make sure we still have chilren
+        while (left(largest) < arr.length) {
+            let root = largest
+            // Left child is greater
+            if (arr[left(root)] > arr[largest]) {
+                largest = left(root)
+            }
+            // Right child exists and is greater
+            if (right(root) < arr.length && arr[right(root)] > arr[largest]) {
+                largest = right(root)
+            }
+
+            if (largest === root) break;
+            // Do the swap and highlight
+            //TODO: Cut this out of the loop so we only have to do one swap
+            let temp = arr[root]
+            arr[root] = arr[largest]
+            arr[largest] = temp
+
+            highlight(root, largest)
+            yield
+            root = largest
+
+        }
+
+
+    }
+
+    // Continually pull the highest element from the heap
 }
