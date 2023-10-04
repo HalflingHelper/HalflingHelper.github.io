@@ -152,7 +152,6 @@ function* mergeSort(arr) {
     }
     highlight()
     return
-
 }
 
 // Helpers for heap sort
@@ -185,12 +184,47 @@ function* heapSort(arr) {
 
             highlight(root, largest)
             yield
-            root = largest
-
         }
-
-
     }
 
+    let end = arr.length - 1
+
     // Continually pull the highest element from the heap
+    while (end > 0) {
+        temp = arr[end]
+        arr[end] = arr[0]
+        arr[0] = temp
+
+        highlight(0, end)
+        yield
+
+        end--
+
+        // Heapify starting at 0
+        let curr = 0;
+        while (left(curr) <= end) {
+            root = curr
+
+            if (arr[left(root)] > arr[curr]) {
+                curr = left(root)
+            }
+
+            // Right child exists and is greater
+            if (right(root) <= end && arr[right(root)] > arr[curr]) {
+                curr = right(root)
+            }
+
+            if (curr === root) break;
+            // Do the swap and highlight
+            //TODO: Cut this out of the loop so we only have to do one swap
+            let temp = arr[root]
+            arr[root] = arr[curr]
+            arr[curr] = temp
+
+            highlight(root, curr)
+            yield
+        }
+    }
+    highlight()
+    return
 }
