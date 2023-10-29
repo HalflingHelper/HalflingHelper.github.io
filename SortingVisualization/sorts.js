@@ -20,6 +20,8 @@ function doSort(arr, sortId) {
             return bubbleSort(arr)
         case 4:
             return heapSort(arr)
+        case 5: 
+            return gnomeSort(arr)
         default:
             return
     }
@@ -225,6 +227,29 @@ function* heapSort(arr) {
             yield
         }
     }
+    highlight()
+    return
+}
+
+function* gnomeSort(arr) {
+
+    let i = 0;
+    while (i < arr.length) {
+        if (i == 0 || arr[i] > arr[i-1]) {
+            i++;
+            highlight(i, i-1, "green")
+            yield
+        } else {
+            let tmp = arr[i];
+            arr[i] = arr[i-1]
+            arr[i-1] = tmp;
+            highlight(i, i-1, "blue")
+            yield
+            i--
+        }
+    }
+
+
     highlight()
     return
 }
