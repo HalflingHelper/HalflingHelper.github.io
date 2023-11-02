@@ -1,24 +1,51 @@
-/* Trigger Build */
+@font-face {
+    font-family: Pixellari;
+    src: url("./PIXELLARI.TTF");
+}
+
+:root {
+    --background-color: beige;
+    --text-secondary: darkblue;
+    --text-tertiary: #3f3c9e;
+    --text-primary: #222222;
+    --text-link: teal;
+    --text-link-hover: black;
+    --text-title: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #222222;
+        --text-secondary: darkblue;
+        --text-tertiary: #6c67ff;
+        --text-primary: beige;
+        --text-link: rgb(0, 218, 218);
+        --text-link-hover: white;
+        --text-title: white;
+    }
+}
+
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: beige;
+    background-color: var(--background-color);
+    color: var(--text-primary);
 }
 
 h1 {
-    color: darkblue;
+    color: var(--text-primary);
 }
 
 #page-title {
-    color: black;
+    color: var(--text-title);
 }
 
 h2 {
-    color: #3f3c9e;
+    color: var(--text-tertiary);
 }
 
 p {
-    color: #222222;
+    color: var(--text-primary);
 }
 
 .wrapper {
@@ -29,7 +56,7 @@ p {
 
 footer {
     margin-top: 20px;
-    border-top: 3px dashed darkblue;
+    border-top: 3px dashed var(--text-secondary);
     text-align: center;
     font-weight: bold;
 }
@@ -56,12 +83,12 @@ body {
 a {
     background-color: transparent;
     text-decoration: none;
-    color: teal;
+    color: var(--text-link);
     cursor: pointer;
 }
 
 a:hover {
-    color: black;
+    color: var(--text-link-hover);
 }
 
 /* External Links */
@@ -78,6 +105,67 @@ a[href*="https"] h2:after {
 }
 
 @keyframes blink {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Random Colors for Skills */
+.skill {
+    width: 25%;
+    min-width: 200px;
+    min-height: 200px;
+    font-family: Pixellari;
+    color: white;
+    padding: .2em;
+    transition-duration: .3s;
+}
+
+.skills {
+    cursor: default;
+}
+
+.skill:hover {
+    filter: brightness(95%);
+}
+
+
+.skill:nth-child(odd) {
+    background-color: tomato;
+}
+
+.skill:nth-child(even) {
+    background-color: mediumseagreen;
+}
+
+.skill:nth-child(3n) {
+    background-color: darkcyan;
+}
+
+.skill:nth-child(4n) {
+    background-color: mediumorchid;
+}
+
+.skill:nth-child(5n) {
+    background-color: dodgerblue;
+}
+
+.skill:nth-child(6n) {
+    background-color: darkorange;
+}
+
+.skill:nth-child(7n) {
+    background-color: firebrick;
+}
+
+.skill:nth-child(8n) {
+    background-color: lightseagreen;
+}
+
+.pixellari {
+    font-family: Pixellari;
 }
