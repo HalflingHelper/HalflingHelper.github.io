@@ -11,20 +11,62 @@
     --text-link: teal;
     --text-link-hover: black;
     --text-title: black;
+    --brightness-dif: -20%;
+}
+
+.light {
+    --background-color: beige;
+    --text-secondary: darkblue;
+    --text-tertiary: #3f3c9e;
+    --text-primary: #222222;
+    --text-link: teal;
+    --text-link-hover: black;
+    --text-title: black;
+    --brightness-dif: -20%;
+}
+
+.dark {
+    --background-color: #222222;
+    --text-secondary: darkblue;
+    --text-tertiary: #8e8bea;
+    --text-primary: beige;
+    --text-link: rgb(0, 218, 218);
+    --text-link-hover: white;
+    --text-title: white;
+    --brightness-dif: 20%;
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not(.light):not(.dark) {
+        --background-color: beige;
+        --text-secondary: darkblue;
+        --text-tertiary: #3f3c9e;
+        --text-primary: #222222;
+        --text-link: teal;
+        --text-link-hover: black;
+        --text-title: black;
+        --brightness-dif: -20%;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not(.light):not(.dark) {
         --background-color: #222222;
         --text-secondary: darkblue;
-        --text-tertiary: #6c67ff;
+        --text-tertiary: #8e8bea;
         --text-primary: beige;
         --text-link: rgb(0, 218, 218);
         --text-link-hover: white;
         --text-title: white;
+        --brightness-dif: 20%;
     }
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -168,4 +210,18 @@ a[href*="https"] h2:after {
 
 .pixellari {
     font-family: Pixellari;
+}
+
+#theme-switcher {
+    cursor: pointer;
+}
+
+.theme-ico {
+    filter: brightness(60%);
+    transition-duration: .4s;
+    width: 3em;
+}
+
+.theme-ico:hover {
+    filter: brightness(calc(60% + var(--brightness-dif)));
 }
