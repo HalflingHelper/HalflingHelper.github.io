@@ -4,14 +4,14 @@ const moon = document.getElementById("moon");
 const sun = document.getElementById("sun");
 
 const activateLight = () => {
-    sun.style.display = '';
-    moon.style.display = 'none'
+    moon.style.display = '';
+    sun.style.display = 'none'
     root.className = 'light'
 }
 
 const activateDark = () => {
-    sun.style.display = 'none';
-    moon.style.display = ''
+    moon.style.display = 'none';
+    sun.style.display = ''
     root.className = 'dark'
 }
 
