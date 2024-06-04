@@ -1,9 +1,10 @@
-<!-- TODO: Cool animation or thing that follows cursor around -->
-<!-- TODO: Lightmode/Darkmode button -->
 <!-- TODO: Skills Section -->
 <!-- Add Pictures -->
-<!-- Figure out what resume is doing -->
+<!-- Figure out what resume is doing (or just say site is resume) -->
 <!-- TODO: AI translation -->
+<!-- Make a little more plain text. There isn't a lot on the screen at once right now -->
+<!-- Writing section would be cool -->
+<!-- Inspo: https://dcclogin.github.io/about/, https://web.stanford.edu/~rathi/, https://www.benrogers.dev/#projects, https://www.norvig.com/ -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +52,7 @@
             <div class="about">
                 <h2><span id="typer">Programming</span> Nerd</h2>
                 <script src="scripts/typwrite.js"></script>
-                <p>I'm currently a second-year student majoring in Computer Science and Math at Indiana University. In
+                <p>I'm currently a third-year student majoring in Computer Science and Math at Indiana University. In
                     my free time I enjoy running, climbing, and playing the violin.</p>
             </div>
             <!-- Links to github, resume, and itch? -->
@@ -62,9 +63,10 @@
                     src="external.svg" />
             </div>
             <!-- Skills Section, is good here? -->
-            <!--             
+            <!--                         
             <div class="skills">
-                <h3>Technologies</h3>
+                <h3>Skills</h3>
+                #This is so trite...
                 <p>I'm always learning and exploring new programming languages and concepts, but here are some of my
                     favorites (in order of awesomeness of course).</p>
 
@@ -77,53 +79,8 @@
                 <span class="skill">CSS</span>
             </div> -->
 
-
-            <div id="experience">
-                <h1>Experience</h1>
-                <div class="entries">
-                    <!-- Intertwined -->
-                    <a href="https://www.intertwinedfinance.com/">
-                        <div class="card">
-                            <h2 class="card-title">Intertwined Finance</h2>
-                            <div class="card-list">
-                                <p>Lead development and implementation of new features and design for a financial
-                                    literacy course platform.</p>
-                                <p>Update and maintain the course content database.</p>
-                                <p>Using Blazor (.NET), TailwindCSS, and MySQL</p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- Tutoring -->
-                    <a href="">
-                        <div class="card">
-                            <h2 class="card-title">Peer Tutor and Grader</h2>
-                            <div class="card-list">
-                                <p>Tutor core classes in the math and computer science departments at Indiana
-                                    University.
-                                </p>
-                                <p>Undergraduate grader for pre-calculus classes.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div id="research">
-                <h1>Research</h1>
-                <div class="entries">
-                    <!-- NLP Lab -->
-                    <a href="https://nlp-lab.org/ellipsis/">
-                        <div class="card">
-                            <h2 class="card-title">NLP Lab at Indiana University</h2>
-                            <div class="card-list">
-                                <p>Collecting data for both English and Spanish language ellipsis.</p>
-                                <p>Using Git, VS Code, and Python.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
             <div id="projects">
-                <h1>Selected Projects</h1>
+                <h1>My Projects</h1>
                 <div class="entries">
                     <!-- Chess Engine -->
                     <a href="https://github.com/HalflingHelper/WaneEngine">
@@ -138,17 +95,17 @@
                         </div>
                     </a>
                     <!-- Mega Puzzle -->
-                    <a href="https://sites.google.com/iu.edu/mega-puzzle/home">
-                        <div class="card">
-                            <h2 class="card-title">Mega Puzzle</h2>
-                            <div class="card-list">
-                                <p>An interconnected puzzle extravaganza, inspired by the MIT Mystery hunt.</p>
-                                <p>Designed <em>Tetris</em>, <em>Joust</em>, and <em>Punch Out</em>, and working on new
-                                    puzzles for 2024's incarnation.</p>
-                                <p>Made with HTML, CSS, and my critical thinking skills</p>
-                            </div>
+                    <div class="card">
+                        <h2 class="card-title">Mega Puzzle</h2>
+                        <div class="card-list">
+                            <p>An interconnected puzzle extravaganza, inspired by the MIT Mystery hunt.</p>
+                            <p><a href="https://sites.google.com/iu.edu/mega-puzzle/home"><strong>2023:</strong></a>
+                                Tetris, Joust, and Punch Out</p>
+                            <p><a href="https://luddy-llc.github.io/MegaPuzzle2024/"><strong>2024:</strong></a>
+                                Preoccupational, Behind Bars, Force Checkmate, Standardized Testing, and More!</p>
+                            <p>Made with HTML, CSS, and my critical thinking skills</p>
                         </div>
-                    </a>
+                    </div>
                     <!-- Sorting algorithms -->
                     <a href="SortingVisualization/sort.html">
                         <div class="card">
@@ -169,13 +126,83 @@
                             </div>
                         </div>
                     </a>
-                    <!-- A video game if I ever finish it -->
-                    <!-- Running Data -->
                 </div>
             </div>
+
+            <div id="experience">
+                <h1>Experience</h1>
+                <div class="entries">
+                    <!-- Intertwined -->
+                    <a href="https://www.intertwinedfinance.com/">
+                        <div class="card">
+                            <h2 class="card-title">Intertwined Finance</h2>
+                            <div class="card-list">
+                                <p>Lead development and implementation of new features and design for a financial
+                                    literacy course platform.</p>
+                                <p>Update and maintain the course content database.</p>
+                                <p>Using .NET, React, and MySQL</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Teaching (Chenchao has a cool table) -->
+                    <a href="">
+                        <div class="card">
+                            <h2 class="card-title">Teaching</h2>
+                            <div class="card-list">
+                                <p>Undergraduate instructor
+                                    <a href="https://iudatastructurescourse.github.io/course-web-page-spring-2024/">C343
+                                        Data Structures</a>
+                                    and
+                                    <a href="https://plprinciples.luddy.indiana.edu/index.html">Programming
+                                        Languages</a>
+                                </p>
+                                <p>Undergraduate grader for M127 Precalculus with trigonometry</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="research">
+                <h1>Research</h1>
+                <div class="entries">
+                    <!-- CRC -->
+                    <a href="https://crc.nd.edu/">
+                        <div class="card">
+                            <h2 class="card-title">Blockchain Research Group at Notre Dame</h2>
+                            <div class="card-list">
+                                <p>Summer Research Assistant</p>
+                                <p>Building a real time pipeline for data from the Ethereum Blockchain</p>
+                                <p>Using Python and Javascript</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Wonks -->
+                    <a href="https://wonks.github.io/">
+                        <div class="card">
+                            <h2 class="card-title">Indiana University PL Wonks</h2>
+                            <div class="card-list">
+                                <p>Study and discuss programming languages.</p>
+                                <p>It's fun!</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- NLP Lab -->
+                    <a href="https://nlp-lab.org/ellipsis/">
+                        <div class="card">
+                            <h2 class="card-title">NLP Lab at Indiana University</h2>
+                            <div class="card-list">
+                                <p>Collecting data for both English and Spanish language ellipsis.</p>
+                                <p>Using Git, VS Code, and Python.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
             <!-- Maybe this is optional -->
             <div id="involvement">
-                <h1>Community Involvement</h1>
+                <h1>Other Stuff</h1>
                 <div class="entries">
                     <!-- Student Ambassador -->
                     <a href="https://luddy.indiana.edu/admissions/student-ambassadors.html">
@@ -198,17 +225,6 @@
                             </div>
                         </div>
                     </a>
-                    <!-- Lotus Fest -->
-                    <a href="https://www.lotusfest.org/festival-main/">
-                        <div class="card">
-                            <h2 class="card-title">Lotus Festival</h2>
-                            <div class="card-list">
-                                <p>An annual world music festival in Bloomington, Indiana.</p>
-                                <p>As a volunteer I provided support to event organizers to create a positive
-                                    experience for event attendees.</p>
-                            </div>
-                        </div>
-                    </a>
                     <!-- Chess -->
                     <a>
                         <div class="card">
@@ -216,6 +232,7 @@
                             <div class="card-list">
                                 <p>Competing for the IU Chess Club team in the Collegiate Chess League.</p>
                                 <p>Playing and improving at chess at weekly club meetings.</p>
+                                <p>Develop and maintain the club's website.</p>
                             </div>
                         </div>
                     </a>
