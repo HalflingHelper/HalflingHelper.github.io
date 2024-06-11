@@ -108,7 +108,7 @@ body {
 }
 
 .card-list p::before {
-    content: " 🡺";
+    content: " → "
 }
 
 .card {
