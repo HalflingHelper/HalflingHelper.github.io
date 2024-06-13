@@ -126,14 +126,14 @@ function* selectionSort(arr) {
 
 function* mergeSort(arr) {
     let step = 2;
-    while (step < arr.length * 2) {
+    while (step < arr.length * 2) { 
         //Start Points - Every 2nd val, every 4th value, ...
-        for (let i = 0; i < arr.length; i += step) {
+        for (let i = 0; i < arr.length; i += step) { 
             //Checking Each Pair
             let size = step / 2;
             let j = i
 
-            while (j < step + i) {
+            while (j < step + i) { 
                 if (j >= arr.length || j + size >= i + step)
                     break
                 let temp = arr[size + j]
