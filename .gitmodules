@@ -1,0 +1,3 @@
+[submodule "TournamentSimulator"]
+	path = TournamentSimulator
+	url = git@github.com:HalflingHelper/TournamentSimulator.git
