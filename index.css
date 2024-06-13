@@ -158,21 +158,28 @@ a[href*="https"] h2:after {
 
 /* Random Colors for Skills */
 .skill {
-    width: 25%;
-    min-width: 200px;
-    min-height: 200px;
     font-family: Pixellari;
     color: white;
     padding: .2em;
     transition-duration: .3s;
+    margin: 2px;
+}
+
+.skill img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(146deg) brightness(104%) contrast(104%);
 }
 
 .skills {
     cursor: default;
 }
 
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .skill:hover {
-    filter: brightness(95%);
+    filter: brightness(80%);
 }
 
 
