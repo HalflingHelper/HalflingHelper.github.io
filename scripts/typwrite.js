@@ -1,6 +1,6 @@
 let handle;
 
-const options = ["Math", "Language", "Music", "Reading", "Running", "Chess", "Programming", "Video Game"];
+const options = ["Math", "Programming", "Language", "Music", "Reading", "Chess", "Video Game"];
 
 async function replaceTyper() {
 
