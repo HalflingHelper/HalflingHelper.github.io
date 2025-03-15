@@ -7,6 +7,7 @@
     --background-color: beige;
     --text-secondary: darkblue;
     --text-tertiary: #3f3c9e;
+    --text-tertiary-shadow: #4f88d2;
     --text-primary: #222222;
     --text-link: teal;
     --text-link-hover: black;
@@ -18,6 +19,7 @@
     --background-color: beige;
     --text-secondary: darkblue;
     --text-tertiary: #3f3c9e;
+    --text-tertiary-shadow: #4f88d2;
     --text-primary: #222222;
     --text-link: teal;
     --text-link-hover: black;
@@ -29,6 +31,7 @@
     --background-color: #222222;
     --text-secondary: darkblue;
     --text-tertiary: #8e8bea;
+    --text-tertiary-shadow: #342ee2;
     --text-primary: beige;
     --text-link: rgb(0, 218, 218);
     --text-link-hover: white;
@@ -118,8 +121,22 @@ body {
     transition-duration: 0.3s
 }
 
-.card:hover {
-    left: 5px;
+.card h2 {
+    transition-duration: 0.5s;
+}
+
+.card:hover h2 {
+    /* margin-left: 15px; */
+   transform: translate(5px, 5px);
+   /* filter: drop-shadow(-10px -10px green); */
+   text-shadow: 
+   /* -6px -6px 0px black, */
+   -5px -5px 0.5px var(--text-tertiary-shadow),
+   -4px -4px 0.5px var(--text-tertiary-shadow),
+   -3px -3px 0.5px var(--text-tertiary-shadow),
+   -2px -2px 0.5px var(--text-tertiary-shadow),
+   -1px -1px 0.5px var(--text-tertiary-shadow);
+
 }
 
 a {

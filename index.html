@@ -3,10 +3,10 @@
 <!-- Figure out what resume is doing (or just say site is resume) -->
 <!-- Make a little more plain text. There isn't a lot on the screen at once right now -->
 <!-- Writing section would be cool -->
- <!-- Think about moving lists to different pages -->
+<!-- Think about moving lists to different pages -->
 <!-- Inspo: https://dcclogin.github.io/about/, https://web.stanford.edu/~rathi/, https://www.benrogers.dev/#projects, https://www.norvig.com/ -->
 <!-- https://lynn.github.io/ -->
- <!-- https://www.stroustrup.com/index.html -->
+<!-- https://www.stroustrup.com/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,11 +51,11 @@
             <div class="about">
                 <h2><span id="typer">Math</span> Nerd</h2>
                 <script src="scripts/typwrite.js"></script>
-                <p> Welcome to my homepage! I'm a third-year undergraduate majoring in Computer Science and
-                    Math at Indiana University,
-                    with minors in Spanish and Philosophy. In what free time I have, I run and play the violin.
-                    My favorite book (right now) is Gödel Escher Bach, my favorite programming language is Racket,
-                    and my favorite JavaScript framework is <code>null</code>.</p>
+                <p>
+                    I am an undergraduate studying math and computer science at Indiana University
+                    in Bloomington, IN. I am interested in programming languages, systems and
+                    other topics at the intersection of math and computing. I enjoy playing the
+                    violin, making crossword puzzles, and hacking on pl projects.</p>
             </div>
             <!-- Links to github, resume, and itch? -->
             <div class="links">
@@ -66,8 +66,32 @@
             </div>
 
             <div id="projects">
-                <h1>My Projects</h1>
+                <h1>Projects</h1>
                 <div class="entries">
+                    <!-- Deduce -->
+                    <div class="card">
+                        <h2 class="card-title">Deduce</h2>
+                        <div>
+                            <p><a href="https://github.com/jsiek/deduce" target="_blank">Code</a>
+                                &bull;
+                                <a href="https://jsiek.github.io/deduce/" target="_blank">Site</a>
+                            </p>
+                        </div>
+                        <div class="card-list">
+                            <p>A proof assistant created for education and used in the IU data structures course.</p>
+                            <p>I have worked on implementing biconditionals, improved error messages and the
+                                <a href="https://github.com/HalflingHelper/deduce-mode" target="_blank">vscode
+                                    extension</a>
+                                and
+                                <a href="https://github.com/HalflingHelper/deduce-lsp" target="_blank">language
+                                    server</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    
+
+
                     <!-- Tournament Sim -->
                     <div class="card">
                         <a href="TournamentSimulator/index.html">
@@ -107,13 +131,15 @@
                                 Tetris, Joust, and Punch Out</p>
                             <p><a href="https://luddy-llc.github.io/MegaPuzzle2024/"><strong>2024:</strong></a>
                                 Preoccupational, Behind Bars, Force Checkmate, Standardized Testing, and More!</p>
+                            <p><strong>2025:</strong>
+                                Coming soon :)</p>
                             <p>Made with JavaScript, HTML, and CSS</p>
                         </div>
                     </div>
                     <!-- Sorting algorithms -->
                     <a href="SortingVisualization/sort.html">
                         <div class="card">
-                            <h2 class="card-title">Sorting Algorithm Visualizer</h2>
+                            <h2 class="card-title">Sorting Algorithm Visualization</h2>
                             <div class="card-list">
                                 <p>Visualizer for 4 basic sorting algorithms</p>
                                 <p>Made with JavaScript and HTML</p>
@@ -136,15 +162,39 @@
             <div id="experience">
                 <h1>Experience</h1>
                 <div class="entries">
+                    <div class="card">
+                        <h2 class="card-title">Indiana Daily Student</h2>
+                        <div class="card-list">
+                            <p>Managing editor of the digital desk, helping
+                                oversee the publication process for multimedia web buildouts.
+                            </p>
+                           
+                        </div>
+                        <div>
+                            <p>
+                                <a target="_blank"
+                                href="https://specials.idsnews.com/oscars-live-updates-2025/">Live oscar updates</a>
+                                &bull;
+                                <a target="_blank"
+                                href="https://specials.idsnews.com/indiana-mens-basketball-coach-candidates-hot-board-big-ten-iu-bloomington/">Coaching candidates</a>
+                                &bull;
+                                <a target="_blank"
+                                href="https://specials.idsnews.com/sexual-abuse-iu-jacobs-music-school/index.html">&lsquo;Neverending&rsquo;</a>
+                                &bull;
+                                <a target="_blank"
+                                href="https://specials.idsnews.com/elections-guide-2024-ids/index.html">Election tracker</a>
+                            </p>
+                        </div>
+                    </div>
+
                     <!-- Intertwined -->
                     <a href="https://www.intertwinedfinance.com/">
                         <div class="card">
                             <h2 class="card-title">Intertwined Finance</h2>
                             <div class="card-list">
-                                <p>Lead development and implementation of new features and design for a financial
+                                <p>Led development and implementation of new features and design for a financial
                                     literacy course platform.</p>
-                                <p>Update and maintain the course content database.</p>
-                                <p>Using .NET, React, and MySQL</p>
+                                <p>Responsible for managing and updating course content.</p>
                             </div>
                         </div>
                     </a>
@@ -156,23 +206,14 @@
                                 <a href="https://iudatastructurescourse.github.io/course-web-page-spring-2024/">C343
                                     Data Structures</a>
                                 and
-                                <a href="https://plprinciples.luddy.indiana.edu/index.html">Programming
+                                <a href="https://plprinciples.luddy.indiana.edu/index.html">C311 Programming
                                     Languages</a>
                             </p>
                             <p>Undergraduate grader for M127 Precalculus with trigonometry</p>
                         </div>
                     </div>
                     <!-- Chess -->
-                    <a>
-                        <div class="card">
-                            <h2 class="card-title">Indiana University Chess Club</h2>
-                            <div class="card-list">
-                                <p>Competing for the IU Chess Club team in the Collegiate Chess League.</p>
-                                <p>Playing and improving at chess at weekly club meetings.</p>
-                                <p>Developing and maintaining the club's website.</p>
-                            </div>
-                        </div>
-                    </a>
+                   
                 </div>
             </div>
 
@@ -183,33 +224,31 @@
                     <a href="https://crc.nd.edu/">
                         <div class="card">
                             <h2 class="card-title">Blockchain Research Group at Notre Dame</h2>
-                            <div class="card-list">
-                                <p>Summer Research Assistant</p>
-                                <p>Building a real time pipeline for data from the Ethereum Blockchain</p>
-                                <p>Using Python, Javascript, and ArangoDB.</p>
+                            <div>
+                                <p><a href="https://youtu.be/-AHikDw3Y0E?si=pS0oT89HMmwkIr09" target="_blank">Presentation</a>
+                                    &bull; <a href="https://arxiv.org/abs/2501.11668" target="_blank">Paper</a></p>
                             </div>
-                        </div>
-                    </a>
-                    <!-- Wonks -->
-                    <a href="https://wonks.github.io/">
-                        <div class="card">
-                            <h2 class="card-title">Indiana University PL Wonks</h2>
                             <div class="card-list">
-                                <p>Study and discuss programming languages.</p>
-                                <p>It's fun!</p>
+                                <p>Extended the functionality of a real time pipeline for data from the Ethereum Blockchain</p>
+                                <p>Studied the transfer
+                                    networks of on chain tokens, 
+                                    contributing to scam detection efforts. </p>
                             </div>
                         </div>
                     </a>
                     <!-- NLP Lab -->
-                    <a href="https://nlp-lab.org/ellipsis/">
-                        <div class="card">
+                    <div class="card">
+                        <a href="https://nlp-lab.org/ellipsis/">
+
                             <h2 class="card-title">NLP Lab at Indiana University</h2>
-                            <div class="card-list">
-                                <p>Collecting data for both English and Spanish language ellipsis.</p>
-                                <p>Using Git, VS Code, and Python.</p>
-                            </div>
+                        </a>
+                        <div class="card-list">
+                            <p>Collected data for both English and Spanish language ellipsis and used simple machine learning models to recognize the
+                                phenomenon. </p>
+                            <!-- Poster -->
+                            <p>Part of IU&rsquo;s undergraduate research program.</p>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
